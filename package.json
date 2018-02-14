@@ -1,0 +1,23 @@
+{
+  "name": "image-search-abstraction-layer",
+  "version": "0.0.1",
+  "description": "A Node.js REST API that allows you to search for images.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "^8.7.0"
+  },
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "body-parser": "^1.18.2",
+    "mongoose": "^5.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maribelduran/image-search-abstraction-layer.git"
+  },
+  "author": "Maribel Duran"
+}

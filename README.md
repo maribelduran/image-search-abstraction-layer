@@ -1,14 +1,47 @@
-# image-search-abstraction-layer
+# Image Search Abstraction Layer :camera:
+
+This service accepts a search string as a parameter and will return a set of images relating to the given search string. The response includes the images URLs, alt text and page urls. You can also get a list of the most recently submitted search strings.
 
 
-1. Objective: Build a full stack JavaScript app that allows you to search for images like this: https://cryptic-ridge-9197.herokuapp.com/api/imagesearch/lolcats%20funny?offset=10 and browse recent search queries like this: https://cryptic-ridge-9197.herokuapp.com/api/latest/imagesearch/. Then deploy it to Glitch.
+You can test it at https://img-search-layer-microsrvc.herokuapp.com
 
-2. Note that for each project, you should create a new GitHub repository and a new Glitch project. If you can't remember how to do this, revisit https://freecodecamp.org/challenges/get-set-for-our-api-development-projects.
+A Full Stack Javascript application built using [MongoDB](https://www.mongodb.org/), [Node.js](https://nodejs.org/) and [Express](https://expressjs.com/). An API Project for FreeCodeCamp.
 
-3. Here are the specific user stories you should implement for this project:
+## Example Creation Usage
+--
 
-4. User Story: I can get the image URLs, alt text and page urls for a set of images relating to a given search string.
+## Example Creation Output
+--
 
-5. User Story: I can paginate through the responses by adding a ?offset=2 parameter to the URL.
+## Usage:
+--
 
-6. User Story: I can get a list of the most recently submitted search strings.
+## To Run Project Locally
+
+### Prerequisites
+In order to run this project locally, you should have the following installed:
+
+- [Node.js](https://nodejs.org/)
+- [NPM](https://www.npmjs.com//)
+- [MongoDB](https://www.mongodb.org/)
+
+### Installation & Startup
+1. Fork this repo
+2. Clone the fork
+3. Install Dependencies: `$ npm install`
+4. Run your MongoDB server: `$ mongod --port 27017 --dbpath=./data`
+
+*Note*: Your mongoDB is now running at: mongodb://localhost:27017/<your_database_name>
+5. Add a .env file to your project's root directory and set MONGO_CONNECTION_STRING to mongodb://localhost:27017/<your_database_name>
+``` JavaScript 
+MONGO_CONNECTION_STRING=mongodb://localhost:27017/<your_database_name>
+```
+
+<kbd>
+<img src="https://res.cloudinary.com/maribelduran/image/upload/c_scale,w_500/v1513125661/UrlShortener_env_jbj3by.png"> 
+</kbd>
+
+6. Start the Server: `$ node app.js`
+7. Visit http://localhost:3000/
+
+Enjoy! :blue_heart:
