@@ -1,6 +1,6 @@
 # Image Search Abstraction Layer :camera:
 
-This service accepts a search string as a parameter and will return a set of images relating to the given search string. The response includes the images URLs, alt text and page urls. You can also get a list of the most recently submitted search strings.
+This service accepts a search string as a parameter and will return a set of images relating to the given search string. The JSON response includes the image's URL, alt text, thumbnail link, and context link. You can also get a list of the most recently submitted search strings.
 
 
 You can test it at https://img-search-layer-microsrvc.herokuapp.com
@@ -8,13 +8,45 @@ You can test it at https://img-search-layer-microsrvc.herokuapp.com
 A Full Stack Javascript application built using [MongoDB](https://www.mongodb.org/), [Node.js](https://nodejs.org/) and [Express](https://expressjs.com/). An API Project for FreeCodeCamp.
 
 ## Example Creation Usage
---
 
+To retrieve a set of images, pass a search term to path  https://<i></i>img-search-layer-microsrvc.herokuapp.com/api/imagesearch/[SEARCHTERM] 
+  
+You can also paginate through the responses by adding a ? offset=[number] parameter to the URL path.
+  
+ ### Valid Image search API call examples
+ ```
+    https://img-search-layer-microsrvc.herokuapp.com/api/imagesearch/puppies
+    https://img-search-layer-microsrvc.herokuapp.com/api/imagesearch/puppies?offset=2
+ ```
+ 
 ## Example Creation Output
---
+```javascript
+[
+  {
+  url: "https://www.dogliciousspa.com/v/vspfiles/assets/images/puppiesplaying.jpg",
+  alt_text: "Puppy Socialization, Puppy Class, Training, Dogs, Dog Training ...",
+  thumbnailLink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwKw73Q78qFF4WA8BrYpA6T_C0cZgd6yvM6QNjQhzJMHrW02vu0UxMjt5h",
+  contextLink: "https://www.dogliciousspa.com/category-s/171.htm"
+  },
+  {
+  url: "https://i.ytimg.com/vi/2Y1ZyjGdPeE/maxresdefault.jpg",
+  alt_text: "Puppies Talking and Arguing With Their Humans Compilation - YouTube",
+  thumbnailLink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAoM6k7NCjsTVjuvRXTelL7s8XEI0LNicjVZPz4Wy2FkdFMbPJ7xHX5W8",
+  contextLink: "https://www.youtube.com/watch?v=2Y1ZyjGdPeE"
+  },
+  .
+  .
+  .
+]
+```  
 
-## Usage:
---
+## To get list of the most recent submitted search strings
+
+Make a request to:
+```javascript
+  https://img-search-layer-microsrvc.herokuapp.com/api/recent
+  
+``` 
 
 ## To Run Project Locally
 
