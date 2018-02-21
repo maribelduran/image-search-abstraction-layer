@@ -16,10 +16,10 @@ router.route('/imagesearch/:searchTerm')
   });
   
   //sends an image search request to Google Custom Search Engine and send the response as an JSON object.
-  const results = imageSearch(searchTerm, updateResults, offset, 2);
+  const results = imageSearch(searchTerm, updateResults, offset, 5);
  
   function updateResults(images) {
-    if(images.error && images.error.errors) {
+    if(images.error) {
       return images.error;
     }
     const imageResults = images.map((image)=>{
