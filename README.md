@@ -69,7 +69,7 @@ You should also:
 3) Install Dependencies: `$ npm install`
 4) Run your MongoDB server: `$ mongod --port 27017 --dbpath=./data`
 
-  *Note*: Your mongoDB is now running at: mongodb://localhost:27017/<your_database_name>
+      *Note*: Your mongoDB is now running at: mongodb://localhost:27017/<your_database_name>
 
 5) Add a .env file to your project's root directory and set MONGO_CONNECTION_STRING to mongodb://localhost:27017/<your_database_name>
       ``` JavaScript 
