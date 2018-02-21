@@ -9,11 +9,10 @@ const logger = require('./logger');
 const routes = require('./routes');
 require('dotenv').config();
 
-/*mongoose.connect(process.env.MONGO_CONNECTION_STRING,
+mongoose.connect(process.env.MONGO_CONNECTION_STRING,
   { useMongoClient:true,
     promiseLibrary: global.Promise }
 );
-*/
 
 // Set up express
 const app = express();
