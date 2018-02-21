@@ -4,7 +4,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	color: #222;
-	text-align: center;
+  text-align: center;
 }
 
 .container {
@@ -26,12 +26,20 @@ h1, h2{
  border-bottom: 1px solid #eaecef
 }
 
-code {
-    padding: 2px 4px;
-    font-size: 90%;
-    color: #c7254e;
-    background-color: #f9f2f4;
-    border-radius: 4px;
+.code-snippet{
+ padding: 4px 10px;
+ background-color: hsl(343, 37%, 96%);
+ border-radius: 4px;
+
+}
+
+code, pre{
+  font-size: 80%;
+  color: #c7254e;
+}
+.json-snippet{
+  white-space: pre;
+  overflow: scroll;
 }
 
 footer {

@@ -16,21 +16,38 @@
           <!-- &#128247; == camera -->
          <h1 >Image Search Abstraction Layer &#128247;</h1>
          <p>
-          This service accepts a search string as a parameter and will return a set of images relating to the given search string. 
-           The response includes the images URLs, alt text and page urls. 
+          This service accepts a search string as a parameter and will return a set of images relating to the given search string.
+          The JSON response includes the image's URL, alt text, thumbnail link, and context link. 
            You can also get a list of the most recently submitted search strings.
           </p>
        
          <h2>Example Creation Usage</h2>
-         <p></p>
-        
+         <p>To retrieve a set of images, pass a search term to path  https://<i></i>img-search-layer-microsrvc.herokuapp.com/api/imagesearch/[SEARCHTERM] </p>
+          <p>
+            You can also paginate through the responses by adding a ? offset=[number] parameter to the URL path.
+          </p>
+          
+        <h3>Valid Image search API call examples</h3>
+        <div class="code-snippet">
+         <code>
+          https://img-search-layer-microsrvc.herokuapp.com/api/imagesearch/puppies
+          <br>
+         
+          https://img-search-layer-microsrvc.herokuapp.com/api/imagesearch/puppies?offset=2    
+         </code>
+
+        </div>
 
          <h2>Example Creation Output</h2>
-         <p></p>
-
-         <h2>Usage:</h2>
-         <p></p>
+         <div class="code-snippet">
+          <pre class="json-snippet" id="json-snippet"></pre>
+        </div>
+         <h2>To get list of the most recent submitted search strings</h2>
+         <p>Make a request to:</p>
+         <div class="code-snippet">
+          <code>  https://img-search-layer-microsrvc.herokuapp.com/api/recent</code>
           <!-- &#128153; == blue heart -->
+        </div>
           <p>Enjoy! &#128153;</p>
          
         </div> <!-- well -->
@@ -43,6 +60,7 @@
           </p>
           </footer>
       </div> <!-- container -->
+      <script type='text/javascript' src='/public/js/index.js'></script>
    </body>
 
 </html>
