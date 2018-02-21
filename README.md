@@ -45,7 +45,6 @@ You can also paginate through the responses by adding a ? offset=[number] parame
 Make a request to:
 ```javascript
   https://img-search-layer-microsrvc.herokuapp.com/api/recent
-  
 ``` 
 
 ## To Run Project Locally
@@ -57,23 +56,41 @@ In order to run this project locally, you should have the following installed:
 - [NPM](https://www.npmjs.com//)
 - [MongoDB](https://www.mongodb.org/)
 
+You should also:
+  1) Create a Google Custom Search Engine [https://cse.google.com/cse](https://cse.google.com/cse): Do not specify any sites to search but instead use the "Restrict Pages using Schema.org Types" under the "Advanced options". For the most inclusive set, use the Schema: Thing. In your search engine settings, enable "Image search". <b>Make a note of the CSE ID.</b>
+  
+  2) Set up a Google Custom Search Engine API:
+      Register a new app and enable Google Custom Search Engine API [Google Developers Console](https://console.developers.google.com).
+<b>Make a note of the API key.</b>
+
 ### Installation & Startup
-1. Fork this repo
-2. Clone the fork
-3. Install Dependencies: `$ npm install`
-4. Run your MongoDB server: `$ mongod --port 27017 --dbpath=./data`
+1) Fork this repo
+2) Clone the fork
+3) Install Dependencies: `$ npm install`
+4) Run your MongoDB server: `$ mongod --port 27017 --dbpath=./data`
 
-*Note*: Your mongoDB is now running at: mongodb://localhost:27017/<your_database_name>
-5. Add a .env file to your project's root directory and set MONGO_CONNECTION_STRING to mongodb://localhost:27017/<your_database_name>
-``` JavaScript 
-MONGO_CONNECTION_STRING=mongodb://localhost:27017/<your_database_name>
-```
+  *Note*: Your mongoDB is now running at: mongodb://localhost:27017/<your_database_name>
 
-<kbd>
-<img src="https://res.cloudinary.com/maribelduran/image/upload/c_scale,w_500/v1513125661/UrlShortener_env_jbj3by.png"> 
-</kbd>
+5) Add a .env file to your project's root directory and set MONGO_CONNECTION_STRING to mongodb://localhost:27017/<your_database_name>
+      ``` JavaScript 
+      MONGO_CONNECTION_STRING=mongodb://localhost:27017/<your_database_name>
+      ```
 
-6. Start the Server: `$ node app.js`
-7. Visit http://localhost:3000/
+    <kbd>
+    <img src="https://res.cloudinary.com/maribelduran/image/upload/c_scale,w_500/v1519249003/mongoConnection_ImageSearch_lwbq6o.png"> 
+    </kbd>
+
+6) You wil also need the CSE ID and your Google CSE API Keys in your .env file and name them CSE_ID and
+CSE_API_KEY, respectively
+      ``` JavaScript 
+        CSE_ID=<your_cse_id>
+        CSE_API_KEY=<your_google_cse_api_key>
+      ```
+      <kbd>
+      <img src="http://res.cloudinary.com/maribelduran/image/upload/c_scale,w_500/v1519249003/googleCSEID_bh3yss.png"> 
+      </kbd>
+
+7) Start the Server: `$ node app.js`
+8) Visit http://localhost:3000/
 
 Enjoy! :blue_heart:
